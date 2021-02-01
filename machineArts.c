@@ -1,4 +1,4 @@
-#include <../headers/machineArts.h>
+#include <machineArts.h>
 
 void inicializaQuadro(char matriz[linha][coluna]){
 
@@ -8,7 +8,7 @@ void inicializaQuadro(char matriz[linha][coluna]){
             if ( (i == 0) || (i == (linha - 1))){
                 matriz[i][j] = '-';
             }
-            if( (i != 0 && J == 0) || (i != 0 && j == coluna - 1) ){
+            if( (i != 0 && coluna == 0) || (i != 0 && j == coluna - 1) ){
                 matriz[i][j] = '|';
             }
             

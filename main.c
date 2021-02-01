@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <./headers/machineArts.h>
-#include <./headers/menu.h>
+#include <machineArts.h>
+#include <menu.h>
 
 //gcc -o teste main.c ./headers/machineArts.h ./headers/machineArts.c ./headers/menu.h ./headers/menu.
 
