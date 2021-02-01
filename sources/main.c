@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <headers/machineArts.h>
+#include <headers/menu.h>
 
 int main(int argc, char const *argv[])
 {
