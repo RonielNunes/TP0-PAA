@@ -1,3 +1,5 @@
+//Roniel Nunes Barbosa
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "../headers/funcao.h"
@@ -22,7 +24,7 @@ void inicializaQuadro(char matriz[linha][coluna]){
     }
 }
 
-void exibeMatriz(char matriz[linha][coluna]){
+void exibeQuadro(char matriz[linha][coluna]){
 
     for (int i = 0; i < linha; i++){
         printf("\n");
@@ -43,6 +45,16 @@ int colunaAleatoria(){
     int j = (1+( rand() %(coluna - 2)));
     return j; //Gera um j aleatorio no intervalo de 1 a 78. 
 }
+
+void verificaQuantidade(int *quantidade){
+    printf("%d",(*quantidade));
+    if ((*quantidade) <= 0)
+        (*quantidade) = 1 + rand()%100;
+    else if((*quantidade) > 100)
+        (*quantidade) = 100;
+}
+
+
 
 void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade){
     int i, j, count = 0;
@@ -141,3 +153,4 @@ void pintaSimboloYngAng(char matriz[linha][coluna], int quantidade){
         }
     }
 }
+
