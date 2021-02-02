@@ -95,7 +95,7 @@ void pintaSimboloX(char matriz[linha][coluna], int quantidade){
         i = linhaAleatoria();
         j = colunaAleatoria();
 
-        if(matriz[i][j] == ' ' && matriz[i - 1][j - 1] == ' ' && matriz[i - 1][j + 1] == ' ' && matriz[i + 1][j - 1] == ' ' && matriz[i + 1][j + 1]){            
+        if(matriz[i][j] == ' ' && matriz[i - 1][j - 1] == ' ' && matriz[i - 1][j + 1] == ' ' && matriz[i + 1][j - 1] == ' ' && matriz[i + 1][j + 1] == ' '){            
             matriz[i - 1][j - 1] = '*';//Diagonal Esquerda cima
             matriz[i + 1][j - 1] = '*'; //Diagonal Direita Baixo
             matriz[i][j] = '*'; //meio
@@ -128,8 +128,7 @@ void pintaSimboloYngAng(char matriz[linha][coluna], int quantidade){
         matriz[i+3][j+4] == ' '&& matriz[i+4][j] == ' '&& matriz[i+4][j-1] == ' '&& matriz[i+4][j-2] == ' '&& matriz[i+4][j+1] == ' '&& 
         matriz[i+4][j+2] == ' '&& matriz[i+4][j+3] == ' '
         ){          
-            //=============================================================================================================================================  
-            //matriz[i][j] = '*';
+
             
             matriz[i-5][j] = '*'; //Primeira linha do desenho
             matriz[i-5][j-1] = '*';
@@ -225,11 +224,10 @@ void pintaSimboloArroba(char matriz[linha][coluna], int quantidade){
         j = colunaAleatoria();
 
         if( 
-            matriz[i-5][j] == ' ' &&matriz[i-5][j+1] == ' ' && matriz[i-5][j-1] == ' ' && matriz[i-5][j-2] == ' ' && 
-            matriz[i-5][j-3] == ' ' && matriz[i-5][j-4] == ' ' && matriz[i-4][j+2] == ' ' && matriz[i-4][j-5] == ' ' && 
-            matriz[i-3][j+3] == ' ' && matriz[i-3][j-6] == ' ' && matriz[i-2][j] == ' ' && matriz[i-2][j-2] == ' ' && 
-            matriz[i-2][j-3] == ' ' && matriz[i-2][j-6] == ' ' && matriz[i-2][j+3] == ' ' && matriz[i-1][j] == ' ' && 
-            matriz[i-1][j-1] == ' ' && matriz[i-1][j-4] == ' ' && matriz[i-1][j-6] == ' ' && matriz[i-1][j+3] == ' ' && 
+            matriz[i-5][j] == ' ' &&matriz[i-5][j+1] == ' ' && matriz[i-5][j-1] == ' ' && matriz[i-5][j-2] == ' ' && matriz[i-5][j-3] == ' ' && 
+            matriz[i-5][j-4] == ' ' && matriz[i-4][j+2] == ' ' && matriz[i-4][j-5] == ' ' && matriz[i-3][j+3] == ' ' && matriz[i-3][j-6] == ' ' && 
+            matriz[i-2][j] == ' ' && matriz[i-2][j-2] == ' ' && matriz[i-2][j-3] == ' ' && matriz[i-2][j-6] == ' ' && matriz[i-2][j+3] == ' ' && 
+            matriz[i-1][j] == ' ' && matriz[i-1][j-1] == ' ' && matriz[i-1][j-4] == ' ' && matriz[i-1][j-6] == ' ' && matriz[i-1][j+3] == ' ' && 
             matriz[i][j] == ' ' && matriz[i][j+3] == ' ' && matriz[i][j-4] == ' ' && matriz[i][j-6] == ' ' && matriz[i+1][j] == ' ' && 
             matriz[i+1][j+2] == ' ' && matriz[i+1][j-1]== ' ' && matriz[i+1][j-4] == ' ' && matriz[i+1][j-6] == ' ' && matriz[i+2][j+1] == ' ' && 
             matriz[i+2][j-1] == ' ' && matriz[i+2][j-2] == ' ' && matriz[i+2][j-3] == ' ' && matriz[i+2][j-6] == ' ' && matriz[i+3][j+3] == ' ' && 
