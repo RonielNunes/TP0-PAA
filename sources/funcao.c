@@ -34,14 +34,17 @@ void exibeMatriz(char matriz[linha][coluna]){
     
 }
 
-void pintaSimboloAsterisco(char matriz[linha][coluna]){
-    int i;
-    for ( i = 0; i < 10; i++)
-    {
-        printf("\n %d ",rand() % 80);
-        
-    }
-    
+int linhaAleatoria(){
+    return (1 + rand() % linha - 2);  //gera um i aleatorio no intervalo de 1 a 18.
 }
-void pintaSimboloSoma(char matriz[linha][coluna]);
-void pintaSimboloX(char matriz[linha][coluna]);
+
+int colunaAleatoria(){
+    return (1 + rand() % coluna - 2); //Gera um j aleatorio no intervalo de 1 a 78. 
+}
+
+void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade){
+    int valor = linhaAleatoria();
+    printf("%d",valor);
+}
+void pintaSimboloSoma(char matriz[linha][coluna], int quantidade);
+void pintaSimboloX(char matriz[linha][coluna], int quantidade);
