@@ -9,10 +9,23 @@
 int main(int argc, char const *argv[])
 {
     char matriz[linha][coluna];
+    int quantidade = 1;
 
-    inicializaQuadro(matriz);
-    exibeMatriz(matriz);
-    pintaSimboloAsterisco(matriz);
+     inicializaQuadro(matriz);
+     exibeMatriz(matriz);
+    // pintaSimboloAsterisco(matriz,quantidade);
+
+    // exibeMatriz(matriz);
+
+    // pintaSimboloSoma(matriz,quantidade);
+
+    // exibeMatriz(matriz);
+
+    // pintaSimboloX(matriz,quantidade);
+
+    // exibeMatriz(matriz);
     
+    pintaSimboloYngAng(matriz,quantidade);
+    exibeMatriz(matriz);
     return 0;
 }

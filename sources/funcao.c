@@ -35,16 +35,109 @@ void exibeMatriz(char matriz[linha][coluna]){
 }
 
 int linhaAleatoria(){
-    return (1 + rand() % linha - 2);  //gera um i aleatorio no intervalo de 1 a 18.
+    int i = (1+( rand() %(linha -2)));
+    return i;  //gera um i aleatorio no intervalo de 1 a 18.
 }
 
 int colunaAleatoria(){
-    return (1 + rand() % coluna - 2); //Gera um j aleatorio no intervalo de 1 a 78. 
+    int j = (1+( rand() %(coluna - 2)));
+    return j; //Gera um j aleatorio no intervalo de 1 a 78. 
 }
 
 void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade){
-    int valor = linhaAleatoria();
-    printf("%d",valor);
+    int i, j, count = 0;
+
+    while (count <  quantidade){
+        i = linhaAleatoria();
+        j = colunaAleatoria();
+        if(matriz[i][j] == ' '){
+            matriz[i][j] = '*';
+            count ++;
+        }
+    }
+
 }
-void pintaSimboloSoma(char matriz[linha][coluna], int quantidade);
-void pintaSimboloX(char matriz[linha][coluna], int quantidade);
+    
+void pintaSimboloSoma(char matriz[linha][coluna], int quantidade){
+    int i, j, count = 0;
+
+    while (count <  quantidade){
+        i = linhaAleatoria();
+        j = colunaAleatoria();
+
+        if(matriz[i][j] == ' ' && matriz[i - 1][j] == ' ' && matriz[i + 1][j] == ' ' && matriz[i][j - 1] == ' ' && matriz[i][j + 1]){            
+            matriz[i - 1][j] = '*';//Esquerda
+            matriz[i + 1][j] = '*'; //Direita
+            matriz[i][j] = '*'; //meio
+            matriz[i][j - 1] = '*'; //Baixo
+            matriz[i][j + 1] = '*'; //Cima
+            count ++;
+        }
+    }
+}
+
+void pintaSimboloX(char matriz[linha][coluna], int quantidade){
+        int i, j, count = 0;
+
+    while (count <  quantidade){
+        i = linhaAleatoria();
+        j = colunaAleatoria();
+
+        if(matriz[i][j] == ' ' && matriz[i - 1][j - 1] == ' ' && matriz[i - 1][j + 1] == ' ' && matriz[i + 1][j - 1] == ' ' && matriz[i + 1][j + 1]){            
+            matriz[i - 1][j - 1] = '*';//Diagonal Esquerda cima
+            matriz[i + 1][j - 1] = '*'; //Diagonal Direita Baixo
+            matriz[i][j] = '*'; //meio
+            matriz[i - 1][j + 1] = '*';//Diagonal Direita cima
+            matriz[i + 1][j + 1] = '*'; // Diagonal  Esquerda baixo
+            count ++;
+        }
+    }
+}
+
+void pintaSimboloYngAng(char matriz[linha][coluna], int quantidade){
+        int i, j, count = 0;
+
+    while (count <  quantidade){
+        i = linhaAleatoria();
+        j = colunaAleatoria();
+
+        if(matriz[i][j] == ' ' && matriz[i + 7][j]==' '){            
+            //matriz[i][j] = '*';
+            matriz[i+4][j+1] = '*';
+            matriz[i+4][j+2] = '*';
+            matriz[i+3][j+3] = '*';
+            matriz[i+2][j+4] = '*';
+            matriz[i+1][j+4] = '*';
+            matriz[i][j+4] = '*';
+            matriz[i-1][j+4] = '*';
+            matriz[i+1][j+3] = '*';
+            matriz[i][j+3] = '*';
+            matriz[i-1][j+3] = '*';
+            matriz[i-2][j+3] = '*';
+            matriz[i-3][j+2] = '*';
+            matriz[i-2][j+2] = '*';
+            matriz[i][j+2] = '*';
+            matriz[i+3][j+1] = '*';
+            matriz[i+2][j+1] = '*';
+            matriz[i+1][j+1] = '*';
+            matriz[i][j+1] = '*';
+            matriz[i-3][j] = '*';
+            matriz[i-2][j] = '*';
+            matriz[i-1][j] = '*';
+            matriz[i-3][j-1] = '*';
+            matriz[i-2][j-1] = '*';
+            matriz[i-1][j-1] = '*';
+            matriz[i-2][j-2] = '*';
+            matriz[i-1][j-3] = '*';
+            matriz[i][j-3] = '*';
+            matriz[i+1][j-3] = '*';
+            matriz[i+2][j-3] = '*';
+            matriz[i+3][j-2] = '*';
+            matriz[i+4][j-1] = '*';
+            matriz[i+4][j] = '*';
+            matriz[i+2][j] = '*';
+            matriz[i][j] = '*'; //meio do desenho
+            count ++;
+        }
+    }
+}
