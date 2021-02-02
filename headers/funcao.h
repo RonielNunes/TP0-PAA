@@ -3,6 +3,6 @@
 
 void inicializaQuadro(char matriz[linha][coluna]);
 void exibeMatriz(char matriz[linha][coluna]);
-void pintaAsteriscoSimple(char matriz[linha][coluna]);
-void pintaSímboloSoma(char matriz[linha][coluna]);
+void pintaSimboloAsterisco(char matriz[linha][coluna]);
+void pintaSimboloSoma(char matriz[linha][coluna]);
 void pintaSimboloX(char matriz[linha][coluna]);

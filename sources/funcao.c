@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "../headers/funcao.h"
 
@@ -32,3 +33,15 @@ void exibeMatriz(char matriz[linha][coluna]){
     }
     
 }
+
+void pintaSimboloAsterisco(char matriz[linha][coluna]){
+    int i;
+    for ( i = 0; i < 10; i++)
+    {
+        printf("\n %d ",rand() % 80);
+        
+    }
+    
+}
+void pintaSimboloSoma(char matriz[linha][coluna]);
+void pintaSimboloX(char matriz[linha][coluna]);
