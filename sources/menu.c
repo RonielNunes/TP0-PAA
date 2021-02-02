@@ -16,6 +16,9 @@ void menu(int *opcao, int *quantidade){
     printf("   3 - letra X com asteriscos.                                          \n");
     printf("   4 - figura aleatorias                                                \n");
     printf("   5 - Arte criada pelo aluno                                           \n");
+    printf("   6 - Arte criada pelo aluno                                           \n");
+    printf("   7 - Arte criada pelo aluno                                           \n");
+    printf("   8 - Arte criada pelo aluno                                           \n");
     printf("   Digite o tipo de figura basica desejada: ");
     scanf("%d",opcao);
     printf("   Digite a quantidade de figuras (menor ou igual a zero para aleatorio): ");

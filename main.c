@@ -51,9 +51,15 @@ int main(int argc, char const *argv[])
         case 5:
             inicializaQuadro(matriz);
             verificaQuantidade(&quantidade);
-            pintaSimboloX(matriz,quantidade);
+            pintaSimboloYngAng(matriz,quantidade);
             exibeQuadro(matriz);
-            break;        
+            break;
+        case 6:
+            inicializaQuadro(matriz);
+            verificaQuantidade(&quantidade);
+            pintaSimboloArroba(matriz,quantidade);
+            exibeQuadro(matriz);
+            break;             
         default:
             printf("entrou aqui");
             break;

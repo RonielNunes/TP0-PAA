@@ -113,44 +113,185 @@ void pintaSimboloYngAng(char matriz[linha][coluna], int quantidade){
         i = linhaAleatoria();
         j = colunaAleatoria();
 
-        if(matriz[i][j] == ' ' && matriz[i + 7][j]==' '){            
+        if(
+        matriz[i-5][j] ==' ' && matriz[i-5][j-1] == ' '&& matriz[i-5][j-2] == ' '&& matriz[i-5][j+1] == ' '&& matriz[i-5][j+2] == ' '&& 
+        matriz[i-5][j+3] == ' '&& matriz[i-4][j] == ' '&& matriz[i-4][j-1] == ' '&& matriz[i-4][j-2] == ' '&& matriz[i-4][j-3] == ' '&& 
+        matriz[i-4][j+1] == ' '&& matriz[i-4][j+2] == ' '&& matriz[i-4][j+3] == ' '&& matriz[i-4][j+4] == ' '&& matriz[i-3][j-2] == ' '&& 
+        matriz[i-3][j-3] == ' '&& matriz[i-3][j-4] == ' '&& matriz[i-3][j+1] == ' '&& matriz[i-3][j+2] == ' '&& matriz[i-3][j+3] == ' '&& 
+        matriz[i-3][j+4] == ' '&& matriz[i-3][j+5] == ' '&& matriz[i-2][j-2] == ' '&& matriz[i-2][j-3] == ' '&& matriz[i-2][j-4] == ' '&& 
+        matriz[i-2][j+1] == ' '&& matriz[i-2][j+2] == ' '&& matriz[i-2][j+5] == ' '&& matriz[i-1][j] == ' '&& matriz[i-1][j-1] == ' '&& 
+        matriz[i-1][j-2] == ' '&& matriz[i-1][j-3] == ' '&& matriz[i-1][j-4] == ' '&& matriz[i-1][j+1] == ' '&& matriz[i-1][j+5] == ' '&& 
+        matriz[i][j] == ' '&& matriz[i][j-1] == ' '&& matriz[i][j-2] == ' '&& matriz[i][j-3] == ' '&& matriz[i][j-4] == ' '&& 
+        matriz[i][j+5] == ' '&& matriz[i+1][j-3] == ' '&& matriz[i+1][j-4] == ' '&& matriz[i+1][j+2] == ' '&& matriz[i+1][j+3] == ' '&& 
+        matriz[i+1][j+5] == ' '&& matriz[i+2][j-2] == ' '&& matriz[i+2][j-3] == ' '&& matriz[i+2][j-4] == ' '&& matriz[i+2][j+2] == ' '&& 
+        matriz[i+2][j+3] == ' '&& matriz[i+2][j+5] == ' '&& matriz[i+3][j-1] == ' '&& matriz[i+3][j-2] == ' '&& matriz[i+3][j-3] == ' '&& 
+        matriz[i+3][j+4] == ' '&& matriz[i+4][j] == ' '&& matriz[i+4][j-1] == ' '&& matriz[i+4][j-2] == ' '&& matriz[i+4][j+1] == ' '&& 
+        matriz[i+4][j+2] == ' '&& matriz[i+4][j+3] == ' '
+        ){          
+            //=============================================================================================================================================  
             //matriz[i][j] = '*';
+            
+            matriz[i-5][j] = '*'; //Primeira linha do desenho
+            matriz[i-5][j-1] = '*';
+            matriz[i-5][j-2] = '*';
+            matriz[i-5][j+1] = '*';
+            matriz[i-5][j+2] = '*';
+            matriz[i-5][j+3] = '*';
+
+
+            matriz[i-4][j] = '*'; //segunda
+            matriz[i-4][j-1] = '*';
+            matriz[i-4][j-2] = '*';
+            matriz[i-4][j-3] = '*';
+            matriz[i-4][j+1] = '*';
+            matriz[i-4][j+2] = '*';
+            matriz[i-4][j+3] = '*';
+            matriz[i-4][j+4] = '*';
+
+            //matriz[i-3][j] = '*'; //terceira
+            matriz[i-3][j-2] = '*';
+            matriz[i-3][j-3] = '*';
+            matriz[i-3][j-4] = '*';
+            matriz[i-3][j+1] = '*';
+            matriz[i-3][j+2] = '*';
+            matriz[i-3][j+3] = '*';
+            matriz[i-3][j+4] = '*';
+            matriz[i-3][j+5] = '*';
+            
+            //matriz[i-2][j] = '*'; //quarta
+            matriz[i-2][j-2] = '*';
+            matriz[i-2][j-3] = '*';
+            matriz[i-2][j-4] = '*';
+            matriz[i-2][j+1] = '*';
+            matriz[i-2][j+2] = '*';
+            matriz[i-2][j+5] = '*';
+
+
+            matriz[i-1][j] = '*'; //quinta
+            matriz[i-1][j-1] = '*';
+            matriz[i-1][j-2] = '*';
+            matriz[i-1][j-3] = '*';
+            matriz[i-1][j-4] = '*';
+            matriz[i-1][j+1] = '*';
+            matriz[i-1][j+5] = '*';
+
+            matriz[i][j] = '*'; //meio do desenho
+            matriz[i][j-1] = '*';
+            matriz[i][j-2] = '*';
+            matriz[i][j-3] = '*';
+            matriz[i][j-4] = '*';
+            matriz[i][j+5] = '*';
+
+           // matriz[i+1][j] = '*'; //Primeira linha do meio para baixo
+            matriz[i+1][j-3] = '*'; 
+            matriz[i+1][j-4] = '*';
+            matriz[i+1][j+2] = '*'; 
+            matriz[i+1][j+3] = '*'; 
+            matriz[i+1][j+5] = '*'; 
+            
+            
+            //matriz[i+2][j] = '*'; //segunda
+            matriz[i+2][j-2] = '*';
+            matriz[i+2][j-3] = '*';
+            matriz[i+2][j-4] = '*';
+            matriz[i+2][j+2] = '*';
+            matriz[i+2][j+3] = '*';
+            matriz[i+2][j+5] = '*';
+
+            //matriz[i+3][j] = '*'; //terceira
+            matriz[i+3][j-1] = '*'; 
+            matriz[i+3][j-2] = '*'; 
+            matriz[i+3][j-3] = '*'; 
+            matriz[i+3][j+4] = '*'; 
+
+            matriz[i+4][j] = '*'; //quarta
+            matriz[i+4][j-1] = '*';
+            matriz[i+4][j-2] = '*';
             matriz[i+4][j+1] = '*';
             matriz[i+4][j+2] = '*';
-            matriz[i+3][j+3] = '*';
-            matriz[i+2][j+4] = '*';
-            matriz[i+1][j+4] = '*';
-            matriz[i][j+4] = '*';
-            matriz[i-1][j+4] = '*';
-            matriz[i+1][j+3] = '*';
-            matriz[i][j+3] = '*';
-            matriz[i-1][j+3] = '*';
-            matriz[i-2][j+3] = '*';
-            matriz[i-3][j+2] = '*';
-            matriz[i-2][j+2] = '*';
-            matriz[i][j+2] = '*';
-            matriz[i+3][j+1] = '*';
-            matriz[i+2][j+1] = '*';
-            matriz[i+1][j+1] = '*';
-            matriz[i][j+1] = '*';
-            matriz[i-3][j] = '*';
-            matriz[i-2][j] = '*';
-            matriz[i-1][j] = '*';
-            matriz[i-3][j-1] = '*';
-            matriz[i-2][j-1] = '*';
-            matriz[i-1][j-1] = '*';
-            matriz[i-2][j-2] = '*';
-            matriz[i-1][j-3] = '*';
-            matriz[i][j-3] = '*';
-            matriz[i+1][j-3] = '*';
-            matriz[i+2][j-3] = '*';
-            matriz[i+3][j-2] = '*';
-            matriz[i+4][j-1] = '*';
-            matriz[i+4][j] = '*';
-            matriz[i+2][j] = '*';
-            matriz[i][j] = '*'; //meio do desenho
+            matriz[i+4][j+3] = '*';
+            
+            
             count ++;
         }
     }
 }
 
+void pintaSimboloArroba(char matriz[linha][coluna], int quantidade){
+        int i, j, count = 0;
+
+    while (count <  quantidade){
+        i = linhaAleatoria();
+        j = colunaAleatoria();
+
+        if( 
+            matriz[i-5][j] == ' ' &&matriz[i-5][j+1] == ' ' && matriz[i-5][j-1] == ' ' && matriz[i-5][j-2] == ' ' && 
+            matriz[i-5][j-3] == ' ' && matriz[i-5][j-4] == ' ' && matriz[i-4][j+2] == ' ' && matriz[i-4][j-5] == ' ' && 
+            matriz[i-3][j+3] == ' ' && matriz[i-3][j-6] == ' ' && matriz[i-2][j] == ' ' && matriz[i-2][j-2] == ' ' && 
+            matriz[i-2][j-3] == ' ' && matriz[i-2][j-6] == ' ' && matriz[i-2][j+3] == ' ' && matriz[i-1][j] == ' ' && 
+            matriz[i-1][j-1] == ' ' && matriz[i-1][j-4] == ' ' && matriz[i-1][j-6] == ' ' && matriz[i-1][j+3] == ' ' && 
+            matriz[i][j] == ' ' && matriz[i][j+3] == ' ' && matriz[i][j-4] == ' ' && matriz[i][j-6] == ' ' && matriz[i+1][j] == ' ' && 
+            matriz[i+1][j+2] == ' ' && matriz[i+1][j-1]== ' ' && matriz[i+1][j-4] == ' ' && matriz[i+1][j-6] == ' ' && matriz[i+2][j+1] == ' ' && 
+            matriz[i+2][j-1] == ' ' && matriz[i+2][j-2] == ' ' && matriz[i+2][j-3] == ' ' && matriz[i+2][j-6] == ' ' && matriz[i+3][j+3] == ' ' && 
+            matriz[i+4][j] == ' ' && matriz[i+4][j+1] == ' ' && matriz[i+4][j+2] == ' ' && matriz[i+4][j-1] == ' ' && matriz[i+4][j-2] == ' ' && 
+            matriz[i+4][j-3] == ' ' && matriz[i+4][j-4] == ' '){
+
+            matriz[i-5][j] = '*';//primeira linha
+            matriz[i-5][j+1] = '*';
+            matriz[i-5][j-1] = '*';
+            matriz[i-5][j-2] = '*';
+            matriz[i-5][j-3] = '*';
+            matriz[i-5][j-4] = '*';
+
+            matriz[i-4][j+2] = '*';//2
+            matriz[i-4][j-5] = '*';
+
+            matriz[i-3][j+3] = '*';//3
+            matriz[i-3][j-6] = '*';
+
+            matriz[i-2][j] = '*';//4
+            matriz[i-2][j-2] = '*';
+            matriz[i-2][j-3] = '*';
+            matriz[i-2][j-6] = '*';
+            matriz[i-2][j+3] = '*';
+
+            matriz[i-1][j] = '*';//5
+            matriz[i-1][j-1] = '*';
+            matriz[i-1][j-4] = '*';
+            matriz[i-1][j-6] = '*';
+            matriz[i-1][j+3] = '*';
+
+            matriz[i][j] = '*'; //meio
+            matriz[i][j+3] = '*';
+            matriz[i][j-4] = '*';
+            matriz[i][j-6] = '*';
+
+            matriz[i+1][j] = '*';//1
+            matriz[i+1][j+2] = '*';
+            matriz[i+1][j-1] = '*';
+            matriz[i+1][j-4] = '*';
+            matriz[i+1][j-6] = '*';
+
+            //matriz[i+2][j] = '*';//2
+            matriz[i+2][j+1] = '*';
+            matriz[i+2][j-1] = '*';
+            matriz[i+2][j-2] = '*';
+            matriz[i+2][j-3] = '*';
+            matriz[i+2][j-6] = '*';
+
+            matriz[i+3][j+3] = '*';//3
+            matriz[i+3][j-5] = '*';
+
+
+            matriz[i+4][j] = '*';//4
+            matriz[i+4][j+1] = '*';
+            matriz[i+4][j+2] = '*';
+            matriz[i+4][j-1] = '*';
+            matriz[i+4][j-2] = '*';
+            matriz[i+4][j-3] = '*';
+            matriz[i+4][j-4] = '*';
+
+            count ++;
+        }
+    }
+}
