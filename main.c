@@ -20,8 +20,6 @@ int main(int argc, char const *argv[])
     {
         menu(&opcao,&quantidade);
 
-        //printf("%d %d\n",opcao,quantidade);
-
         switch (opcao)
         {
         case 1:
@@ -51,13 +49,20 @@ int main(int argc, char const *argv[])
         case 5:
             inicializaQuadro(matriz);
             verificaQuantidade(&quantidade);
-            pintaSimboloYngAng(matriz,quantidade);
+            pintaSimboloYinYang(matriz,quantidade);
             exibeQuadro(matriz);
             break;
         case 6:
             inicializaQuadro(matriz);
-            verificaQuantidade(&quantidade);
+            verificaQuantidadeArroba(&quantidade);
             pintaSimboloArroba(matriz,quantidade);
+            exibeQuadro(matriz);
+            break;
+
+        case 7:
+            inicializaQuadro(matriz);
+            verificaQuantidadeBatman(&quantidade);
+            pintaSimboloBatman(matriz,quantidade);
             exibeQuadro(matriz);
             break;             
         default:
