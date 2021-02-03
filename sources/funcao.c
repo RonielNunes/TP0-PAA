@@ -1,8 +1,20 @@
-//Roniel Nunes Barbosa
+/*
+*   Programa: PROGRAMA GERADOR DE OBRA DE ARTE
+*   Autor: Roniel Nunes Barbosa
+*   Matéria: Projeto e Análise de Algoritmos
+*   Professor: Daniel Mendes Barbosa
+*       
+*/
 
 #include <stdlib.h>
 #include <stdio.h>
 #include "../headers/funcao.h"
+
+/*
+    Função incializaQuadro, faz a criação inicial do quadro. Através das condições criadas foi conseguido limitar onde pintar com espaço vazio, ' ou |.
+ Os espaço vazio no interrior do quadro, foi algo que serviu para usar nas condições de pintura nas funções seguintes. Através desse espaço, foi
+ conseguido implementar condições que buscam lugares sem asterios de outras figuras já inseridas. 
+*/
 
 void inicializaQuadro(char matriz[linha][coluna]){
 
@@ -16,13 +28,15 @@ void inicializaQuadro(char matriz[linha][coluna]){
             }
             if( (j == 0 && i!=0 && i != linha -1) || (j == coluna - 1 && i !=0 && i != linha -1)){
                 matriz[i][j] = '|';
-                
             }
-            
         }
-        
     }
 }
+
+/*
+    A função exibeQuadro, funcina simplesmente com a leitura dos dados presente na matriz. Ela exibe cada conteúdo presentes nos indices da mesma,
+quebrado linha após a chegada na última coluna.
+*/
 
 void exibeQuadro(char matriz[linha][coluna]){
 
@@ -31,20 +45,33 @@ void exibeQuadro(char matriz[linha][coluna]){
         for (int j = 0; j < coluna; j++){
             printf(" %c", matriz[i][j]);
         }
-        
     }
-    
 }
+
+/*
+    A função linhaAleatoria, funciona com a delimitação dos espaços que podem ser usados para gerar a imagem. Nessa função, temos a escolha 
+de um indice(i) aleatório da matriz. Além disso, limita-se o intervalo de 1 a 18 para que a imagem não colida com as bordas do quadro. 
+*/
 
 int linhaAleatoria(){
     int i = (1+( rand() %(linha -2)));
     return i;  //gera um i aleatorio no intervalo de 1 a 18.
 }
 
+/*
+    A função colunaAleatoria, funciona com a delimitação dos espaços que podem ser usados para gerar a imagem. Nessa função, temos a escolha 
+de um indice(j) aleatório da matriz. Além disso, limita-se o intervalo de 1 a 78 para que a imagem não colida com as bordas do quadro. 
+*/
+
 int colunaAleatoria(){
     int j = (1+( rand() %(coluna - 2)));
     return j; //Gera um j aleatorio no intervalo de 1 a 78. 
 }
+
+/*
+    O verificaQuantidade, é o tratamento de quantidade de imagens permitida no quadro. Se a quatidade for menor que ou igual a zero, temos um sorteio
+para uma nova quantidade de 1 a 100. Caso a quantidade incial, seja maior que 100, temos setado que o limite será 100.
+*/
 
 void verificaQuantidade(int *quantidade){
     
@@ -54,21 +81,36 @@ void verificaQuantidade(int *quantidade){
         (*quantidade) = 100;
 }
 
-void verificaQuantidadeYinYang(int *quantidade){
-    
-    if ((*quantidade) <= 0)
-        (*quantidade) = 1 + rand()%100;
-    else if((*quantidade) > 100)
-        (*quantidade) = 100;
-}
+/*
+    O verificaQuantidadeYinYang, é o tratamento de quantidade de imagens permitida no quadro referentes ao yan yang. Se a quatidade for menor que ou 
+igual a zero, temos um sorteio para uma nova quantidade de 1 a 6. Caso a quantidade incial, seja maior que 100, temos setado que o limite será 6.
+*/
 
-void verificaQuantidadeArroba(int *quantidade){
+void verificaQuantidadeYinYang(int *quantidade){
     
     if ((*quantidade) <= 0)
         (*quantidade) = 1 + rand()%5;
     else if((*quantidade) > 100)
-        (*quantidade) = 4;
+        (*quantidade) = 6;
 }
+
+/*
+    O verificaQuantidadeArroba, é o tratamento de quantidade de imagens permitida no quadro referentes ao Arroba. Se a quatidade for menor que ou 
+igual a zero, temos um sorteio para uma nova quantidade de 1 a 7. Caso a quantidade incial, seja maior que 100, temos setado que o limite será 7.
+*/
+
+void verificaQuantidadeArroba(int *quantidade){
+    
+    if ((*quantidade) <= 0)
+        (*quantidade) = 1 + rand()%6;
+    else if((*quantidade) > 100)
+        (*quantidade) = 7;
+}
+
+/*
+    O verificaQuantidadeArroba, é o tratamento de quantidade de imagens permitida no quadro referentes ao Simbolo do batman. Se a quatidade for menor que ou 
+igual a zero, temos um sorteio para uma nova quantidade de 1 a 3. Caso a quantidade incial, seja maior que 100, temos setado que o limite será 3.
+*/
 
 void verificaQuantidadeBatman(int *quantidade){
     
@@ -77,6 +119,13 @@ void verificaQuantidadeBatman(int *quantidade){
     else if((*quantidade) > 100)
         (*quantidade) = 3;
 }
+
+/*
+    A função pinturaMista é utilizada no case 4. Ela faz a criação de três valores aleatórios para a quantidade dos simbolos: asteriscos, soma e X.
+Ela funciona com a criação de três variáveis que são utilizadas para conter a quantidade de cada simbolo, onde é feito a geração de números aleatórios 
+no interior do while até que as três quantidades sejam iguais a quantidade inicial desejada. Logo em seguida, é feito a utilização das funções nescessarias 
+para fazer a pintura dos três simbolos e exibição da obra. 
+*/
 
 void pinturaMista(char matriz[linha][coluna],int quantidade){
     int quantidadeTintaAsterisco = 0, quantidadeTintaSoma = 0,quantidadeTintaX = 0;
@@ -88,13 +137,21 @@ void pinturaMista(char matriz[linha][coluna],int quantidade){
         quantidadeTintaSoma = 1+ rand() % quantidade;
         quantidadeTintaX = 1+ rand() % quantidade;
     }
-    printf("Quantidade %d\n",quantidadeTintaAsterisco+quantidadeTintaSoma+quantidadeTintaX);
+    //printf("Quantidade %d\n",quantidadeTintaAsterisco+quantidadeTintaSoma+quantidadeTintaX);
 
     pintaSimboloAsterisco(matriz,quantidadeTintaAsterisco);
     pintaSimboloSoma(matriz,quantidadeTintaSoma);
     pintaSimboloX(matriz,quantidadeTintaX);
     exibeQuadro(matriz);
 }
+
+/*
+   A função pintaSimboloAsterisco, tem como parametros a matriz e a quantidade. A pintaSimboloAsterisco utilizando as seguintes condições, uma 
+variável chamada count é usada para conferir se a quantidade de asteriscos preenchidos é igual a quantidade total de asteriscos recebida do 
+usuário. Utiizamos a função linhaAleatoria para gerar um número aleatorio entre 1 e 19 para i e a utilização da colunaAleatoria para gerar de 
+1 a 79 para j ignorando as bordas que estão em 0 e 19 para i e 0 e 79 para j. Então conferimos se o espaço da matriz é um espaço vazio e se for um espaço vazio, preenchemos
+ com um asteriscos e  incrementamos +1 na quantidade de asteriscos preenchidos. Deste modo, é feito a inserção do asterisco na posição desejada. 
+*/
 
 void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade){
     int i, j, count = 0;
@@ -109,7 +166,12 @@ void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade){
     }
 
 }
-    
+
+/*
+    A função pintaSimboloSoma, funciona da mesma maneira que a anterior. Sendo diferente simplesmente na sua condição de verificação e caso atendida
+é feito a pintura utilizando mais posições devido se tratar de uma imagem mais complexa. 
+*/
+
 void pintaSimboloSoma(char matriz[linha][coluna], int quantidade){
     int i, j, count = 0;
 
@@ -128,6 +190,11 @@ void pintaSimboloSoma(char matriz[linha][coluna], int quantidade){
     }
 }
 
+/*
+    A função pintaSimboloX, funciona da mesma maneira que a anterior. Sendo diferente simplesmente na sua condição de verificação e caso atendida
+é feito a pintura utilizando mais posições devido se tratar de uma imagem mais complexa. 
+*/
+
 void pintaSimboloX(char matriz[linha][coluna], int quantidade){
         int i, j, count = 0;
 
@@ -145,6 +212,14 @@ void pintaSimboloX(char matriz[linha][coluna], int quantidade){
         }
     }
 }
+
+
+/*
+    Essas últimas três funções que são: pintaSimboloYinYang, pintaSimboloArroba e pintaSimboloBatman. Tem o mesmo funcionamento supracitado das funções 
+anteriores, seu diferencial é na questão de se tratar de imagem mais elaboradas, dando em sii uma maior quantidade de condições a serem atingidas 
+para gerar o seu preenchimento no quadro. Foi feito a utilização de imagem buscando sempre uma menor quantidade de pixel, sendo a mais dificl de 
+elaborar a imagem do yin yang. Essa dificuldade se veio por motivos de ter um maior número de indices a serem preenchidos.
+*/
 
 void pintaSimboloYinYang(char matriz[linha][coluna], int quantidade){
         int i, j, count = 0, maxTentativa = 100;
