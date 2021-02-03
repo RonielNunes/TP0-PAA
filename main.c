@@ -12,11 +12,9 @@ int main(int argc, char const *argv[])
 {
     
     char matriz[linha][coluna];
-    int quantidade = 1;
-    int opcao;
-    int parada = 1;
+    int quantidade,opcao,parada = 0;
 
-    while (parada != 0)
+    while (parada != 1)
     {
         menu(&opcao,&quantidade);
 
@@ -43,8 +41,7 @@ int main(int argc, char const *argv[])
         case 4:
             inicializaQuadro(matriz);
             verificaQuantidade(&quantidade);
-            pintaSimboloX(matriz,quantidade);
-            exibeQuadro(matriz);
+            pinturaMista(matriz,quantidade);
             break;
         case 5:
             inicializaQuadro(matriz);
@@ -64,39 +61,18 @@ int main(int argc, char const *argv[])
             verificaQuantidadeBatman(&quantidade);
             pintaSimboloBatman(matriz,quantidade);
             exibeQuadro(matriz);
+            break;
+        case 8:
+            parada = 1;
+            mensagemEncerramento();
             break;             
         default:
-            printf("entrou aqui");
+            mensagemErro();
             break;
         }
 
 
 
     }
-    
-
-
-
-
-    // char matriz[linha][coluna];
-    // int quantidade = 1;
-    // int opcao;
-
-    //  inicializaQuadro(matriz);
-    //  exibeMatriz(matriz);
-    // // pintaSimboloAsterisco(matriz,quantidade);
-
-    // // exibeMatriz(matriz);
-
-    // // pintaSimboloSoma(matriz,quantidade);
-
-    // // exibeMatriz(matriz);
-
-    // // pintaSimboloX(matriz,quantidade);
-
-    // // exibeMatriz(matriz);
-    
-    // pintaSimboloYngAng(matriz,quantidade);
-    // exibeMatriz(matriz);
     return 0;
 }

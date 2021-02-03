@@ -7,6 +7,7 @@ void exibeQuadro(char matriz[linha][coluna]);
 void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade);
 void pintaSimboloSoma(char matriz[linha][coluna], int quantidade);
 void pintaSimboloX(char matriz[linha][coluna], int quantidade);
+void pinturaMista(char maitriz[linha][coluna],int quantidade);
 void pintaSimboloYinYang(char matriz[linha][coluna], int quantidade);
 void pintaSimboloArroba(char matriz[linha][coluna], int quantidade);
 void pintaSimboloBatman(char matriz[linha][coluna], int quantidade);

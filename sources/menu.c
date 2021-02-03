@@ -18,9 +18,23 @@ void menu(int *opcao, int *quantidade){
     printf("   5 - Arte criada yin yang                                             \n");
     printf("   6 - Arte criada Arroba                                               \n");
     printf("   7 - Arte criada Simbolo Batman                                       \n");
+    printf("   8 - Encerrar programa                                                \n");
     printf("   Digite o tipo de figura basica desejada: ");
     scanf("%d",opcao);
-    printf("   Digite a quantidade de figuras (menor ou igual a zero para aleatorio): ");
-    scanf("%d",quantidade);
-    printf("============================================================================\n");
+    if ((*opcao) == 8)
+        return;
+    else if( (*opcao)>= 1 && (*opcao) <=7 ){
+        printf("   Digite a quantidade de figuras (menor ou igual a zero para aleatorio): ");
+        scanf("%d",quantidade);
+        printf("============================================================================\n");
+    }
+
+}
+
+void mensagemEncerramento(){
+    printf("\n\n PROGRAMA ENCERRADO! TENHA UM BOM DIA!\n\n");
+}
+
+void mensagemErro(){
+    printf("\n\nOPCAO NAO ENCONTADA! Tente novamente!\n\n");
 }

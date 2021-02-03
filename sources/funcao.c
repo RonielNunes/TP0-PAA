@@ -78,8 +78,22 @@ void verificaQuantidadeBatman(int *quantidade){
         (*quantidade) = 3;
 }
 
-void pinturaMista(){
-    
+void pinturaMista(char matriz[linha][coluna],int quantidade){
+    int quantidadeTintaAsterisco = 0, quantidadeTintaSoma = 0,quantidadeTintaX = 0;
+
+    printf("Quantidade %d\n",quantidade);
+    while ((quantidadeTintaAsterisco + quantidadeTintaSoma + quantidadeTintaX) != quantidade)
+    {
+        quantidadeTintaAsterisco = 1+ rand() % quantidade;
+        quantidadeTintaSoma = 1+ rand() % quantidade;
+        quantidadeTintaX = 1+ rand() % quantidade;
+    }
+    printf("Quantidade %d\n",quantidadeTintaAsterisco+quantidadeTintaSoma+quantidadeTintaX);
+
+    pintaSimboloAsterisco(matriz,quantidadeTintaAsterisco);
+    pintaSimboloSoma(matriz,quantidadeTintaSoma);
+    pintaSimboloX(matriz,quantidadeTintaX);
+    exibeQuadro(matriz);
 }
 
 void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade){
