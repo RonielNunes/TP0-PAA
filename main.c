@@ -70,9 +70,6 @@ int main(int argc, char const *argv[])
             mensagemErro();
             break;
         }
-
-
-
     }
     return 0;
 }
