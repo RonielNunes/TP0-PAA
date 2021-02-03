@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
     
     
     char matriz[linha][coluna];          // Variáveis usadas no main, criação da variável matriz usada para simular o quadro a ser pintado
-    int quantidade,opcao,parada = 0;     //e variáveis de controle e operções(quantidade de simbolos, opcao para escolha do simbolo e parada do programa).
+    int quantidade, quantidadeMais,opcao,parada = 0;     //e variáveis de controle e operções(quantidade de simbolos, opcao para escolha do simbolo e parada do programa).
 
     while (parada != 1)
     {
@@ -36,7 +36,9 @@ int main(int argc, char const *argv[])
             inicializaQuadro(matriz);                     //Faz o preenchimento inicial do quadro, com as linha que marcam sua delimitação orizontal e vertical, além de seu preenchimeto interno com espaço.
             verificaQuantidade(&quantidade);              //Faz a limitação da quantidade de imagens permitidas por tipo. 
             pintaSimboloAsterisco(matriz,quantidade);     //Faz o pintura dos simbolos de asteriscos.
-            exibeQuadro(matriz);                          //Faz a exibição da obra prima final. 
+            exibeQuadro(matriz);                          //Faz a exibição da obra prima final.
+            menuAuxiliar(&quantidadeMais);
+            insereMais(matriz,opcao,quantidadeMais,quantidade);
             break;
         case 2:                                           //Case 2, faz a pintura dos simbolos de Soma.
             inicializaQuadro(matriz);

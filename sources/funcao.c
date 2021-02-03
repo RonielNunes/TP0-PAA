@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "../headers/funcao.h"
+#include "../headers/menu.h"
 
 /*
     Função incializaQuadro, faz a criação inicial do quadro. Através das condições criadas foi conseguido limitar onde pintar com espaço vazio, ' ou |.
@@ -79,6 +80,8 @@ void verificaQuantidade(int *quantidade){
         (*quantidade) = 1 + rand()%100;
     else if((*quantidade) > 100)
         (*quantidade) = 100;
+    else
+        return;
 }
 
 /*
@@ -118,6 +121,24 @@ void verificaQuantidadeBatman(int *quantidade){
         (*quantidade) = 1 + rand()% 2;
     else if((*quantidade) > 100)
         (*quantidade) = 3;
+}
+
+void insereMais(char matriz[linha][coluna], int opcao, int quantidadeMais, int quantidade){
+    if ((quantidadeMais) <= 0)
+        (quantidadeMais) = 1 + rand()%100;
+    else if((quantidadeMais || quantidadeMais + quantidade) > 100)
+        (quantidadeMais) = 100;
+
+    switch (opcao)
+    {
+    case 1:
+        pintaSimboloAsterisco(matriz,quantidadeMais);
+        exibeQuadro(matriz);
+        menuAuxiliar(&quantidadeMais);
+        break;
+    default:
+        break;
+    }
 }
 
 /*

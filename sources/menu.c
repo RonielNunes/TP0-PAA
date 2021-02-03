@@ -36,6 +36,22 @@ void menu(int *opcao, int *quantidade){
     }
 
 }
+void menuAuxiliar(int *quantidadeMais){
+    int opcao;
+    printf("\n===========================================================================\n");
+    printf("Deseja um novo quadro ou adicionar mais pinturas ao quadro atual? \n");
+    printf("Digite (1) para NOVO Quadro. \n");
+    printf("Digite (2) para adicionar mais pinturas ao quadro ATUAL.\n\n");
+    printf("Digite: ");
+    scanf("%d",&opcao);
+    if (opcao == 1)
+    {
+        return;
+    }else if(opcao == 2){
+        printf("Digite a nova quantidade de pinturas a serem inseridas: ");
+        scanf("%d",quantidadeMais);
+    }
+}
 
 void mensagemEncerramento(){
     printf("\n\n PROGRAMA ENCERRADO! TENHA UM BOM DIA!\n\n");
