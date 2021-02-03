@@ -15,16 +15,14 @@ Símbolo de soma com asteriscos:
 ***
  *
 
-Letra X com asteriscos: 
-
-* *
- *
-* *
-
+Letra X com asteriscos:
+o o
+ o
+o o
 No início do programa, o usuário irá escolher qual tipo de figura básica irá utilizar em seu quadro. Poderá escolher apenas uma das três, ou então uma mistura aleatória das três. Logo em seguida irá escolher quantas figuras serão utilizadas para a geração do quadro. Se o usuário digitar um número menor ou igual a zero, será gerado um número de figuras aleatório entre 1 e 100. Se o usuário digitar um número maior do que 100, será considerado o número 100. Exemplo de menu inicial do programa com estas opções (o que está sublinhado foram os dados digitados pelo usuário):
 
 PROGRAMA GERADOR DE OBRA DE ARTE:
-=================================
+//////////////////////////////////////////////////////////////
 Escolha o tipo de figura basica a ser usada para criar a obra:
 1 - asterisco simples.
 2 - simbolo de soma com asteriscos.
@@ -39,7 +37,7 @@ A opção 5 deverá ser criada pelo aluno, criando uma obra de arte específica,
 
 Exemplos de saída:
 Valores: tipo de figura: 1, número de figuras: 50
---------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
 |*   *                                                   *                     |
 |           * *                                                                |
 |        *     *                                                *              |
@@ -58,32 +56,32 @@ Valores: tipo de figura: 1, número de figuras: 50
 |    *               *                     *                       *           |
 |       *           *          **                       *                      |
 |                                                 *                       *    |
---------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
 Valores: tipo de figura: 2, número de figuras: 20
---------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
 |                                                                              |
 |                                           *                  *               |
-|                                          ***                ***              |
+|                                           * **              ***              |
 |                                           *                  *               |
-|                                                     *                        |
-|     *                                              ***             *         |
-| *  ***                                              *  *          ***        |
-|***  *                                             *   ***          *         |
-| *                                                ***   *                     |
+|                                                                              |
+|     *                                                                        |
+| *  ***                                                                       |
+|***  *                                             *                          |
+| *                                                ***                         |
 |      *                                            *                          |
 |     ***      *                                                               |
 |      *      ***             *              *          *   *                  |
-|              *             ***            ***        *** ***                 |
+|              *                                                               |
 |    *       *                *            * *          *   *                  |
-|   ***     ***             *             ***  *                               |
-|    *       *             ***          *  *  ***                              |
+|                                                                              |
+|                                                                              |
 |                           *          ***     *                               |
 |                                       *                                      |
---------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
 
 
 Valores: tipo de figura: 3, número de figuras: 15
---------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
 |* *                                                                           |
 | *    * *                                 * *  * *    * *                     |
 |* *    *                                   *    *      *                      |
@@ -106,7 +104,7 @@ Valores: tipo de figura: 3, número de figuras: 15
 
 
 Valores: tipo de figura: 4, número de figuras: 10
---------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
 |                                                                              |
 |                                                                              |
 |               * *                                                            |
@@ -125,4 +123,4 @@ Valores: tipo de figura: 4, número de figuras: 10
 |     * * * *                                                  *               |
 |      *   *                                                                   |
 |     * * * *                                                                  |
---------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
