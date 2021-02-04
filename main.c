@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
     
     
     char matriz[linha][coluna];          // Variáveis usadas no main, criação da variável matriz usada para simular o quadro a ser pintado
-    int quantidade, quantidadeMais,opcao,parada = 0;     //e variáveis de controle e operções(quantidade de simbolos, opcao para escolha do simbolo e parada do programa).
+    int quantidade, quantidadeMais,opcao,repeticao = 2, parada = 0;     //e variáveis de controle e operções(quantidade de simbolos, opcao para escolha do simbolo e parada do programa).
 
     while (parada != 1)
     {
@@ -34,47 +34,67 @@ int main(int argc, char const *argv[])
         {
         case 1:                                           //case 1, faz a pintura dos Simbolos de asteriscos.
             inicializaQuadro(matriz);                     //Faz o preenchimento inicial do quadro, com as linha que marcam sua delimitação orizontal e vertical, além de seu preenchimeto interno com espaço.
-            verificaQuantidade(&quantidade);              //Faz a limitação da quantidade de imagens permitidas por tipo. 
-            pintaSimboloAsterisco(matriz,quantidade);     //Faz o pintura dos simbolos de asteriscos.
-            exibeQuadro(matriz);                          //Faz a exibição da obra prima final.
-            menuAuxiliar(&quantidadeMais);
-            insereMais(matriz,opcao,quantidadeMais,quantidade);
+            while (repeticao == 2){
+                verificaQuantidade(&quantidade);              //Faz a limitação da quantidade de imagens permitidas por tipo. 
+                pintaSimboloAsterisco(matriz,quantidade);     //Faz o pintura dos simbolos de asteriscos.
+                exibeQuadro(matriz);                          //Faz a exibição da obra prima final.
+                menuAuxiliar(&quantidadeMais,&repeticao);
+    
+            }
             break;
         case 2:                                           //Case 2, faz a pintura dos simbolos de Soma.
             inicializaQuadro(matriz);
-            verificaQuantidade(&quantidade);
-            pintaSimboloSoma(matriz,quantidade);          //Faz a pintura dos simbolos soma no painel. 
-            exibeQuadro(matriz);
+            while (repeticao == 2){
+                verificaQuantidade(&quantidade);
+                pintaSimboloSoma(matriz,quantidade);          //Faz a pintura dos simbolos soma no painel. 
+                exibeQuadro(matriz);
+                menuAuxiliar(&quantidadeMais,&repeticao);
+            }
             break;
         case 3:                                           //case 3, faz a pintura dos simbolos de X.
             inicializaQuadro(matriz);
-            verificaQuantidade(&quantidade);
-            pintaSimboloX(matriz,quantidade);             //Faz a pintura dos simbolos X no painel.
-            exibeQuadro(matriz);
+            while (repeticao == 2){
+                verificaQuantidade(&quantidade);
+                pintaSimboloX(matriz,quantidade);             //Faz a pintura dos simbolos X no painel.
+                exibeQuadro(matriz);
+                menuAuxiliar(&quantidadeMais,&repeticao);
+            }
             break;
         case 4:                                           //case 4, faz uma pintura mista.
             inicializaQuadro(matriz);
-            verificaQuantidade(&quantidade);
-            pinturaMista(matriz,quantidade);              //Faz o cálculo para a pintura mista das obras, somente das 3 primeiras listadas. Utiliza quantidades aleatórias entre as três.
+            while (repeticao == 2){
+                verificaQuantidade(&quantidade);
+                pinturaMista(matriz,quantidade);              //Faz o cálculo para a pintura mista das obras, somente das 3 primeiras listadas. Utiliza quantidades aleatórias entre as três.
+                menuAuxiliar(&quantidadeMais,&repeticao);
+            }
             break;
         case 5:                                           //Case 5, faz a pintura de uma arte criada por mim, que foi o simbolo do yin yang.
             inicializaQuadro(matriz);
-            verificaQuantidadeYinYang(&quantidade);       //Função de verificação de quantidade de imagems yin yang.
-            pintaSimboloYinYang(matriz,quantidade);       //Pintura desenvolvida yin yang.
-            exibeQuadro(matriz);
+            while (repeticao == 2){
+                verificaQuantidadeYinYang(&quantidade);       //Função de verificação de quantidade de imagems yin yang.
+                pintaSimboloYinYang(matriz,quantidade);       //Pintura desenvolvida yin yang.
+                exibeQuadro(matriz);
+                menuAuxiliar(&quantidadeMais,&repeticao);
+            }
             break;
         case 6:                                           //Case 6, faz a pintura de uma arte criada por mim, que foi o simbolo do Arroba.
             inicializaQuadro(matriz);
-            verificaQuantidadeArroba(&quantidade);        //Função de verificação de quantidade de imagens arroba.
-            pintaSimboloArroba(matriz,quantidade);        //Pintura desenvolvida simbolo arroba.
-            exibeQuadro(matriz);
+            while (repeticao == 2){
+                verificaQuantidadeArroba(&quantidade);        //Função de verificação de quantidade de imagens arroba.
+                pintaSimboloArroba(matriz,quantidade);        //Pintura desenvolvida simbolo arroba.
+                exibeQuadro(matriz);
+                menuAuxiliar(&quantidadeMais,&repeticao);
+            }
             break;
 
         case 7:                                           //Case 7, faz a pintura de uma arte criada por mim, que foi o simbolo do batman.
             inicializaQuadro(matriz);
-            verificaQuantidadeBatman(&quantidade);        //Função de verificação de quantidade de imagens do simbolo do batman.
-            pintaSimboloBatman(matriz,quantidade);        //Pintura desenvolvida simbolo do Batman.
-            exibeQuadro(matriz);
+            while (repeticao == 2){
+                verificaQuantidadeBatman(&quantidade);        //Função de verificação de quantidade de imagens do simbolo do batman.
+                pintaSimboloBatman(matriz,quantidade);        //Pintura desenvolvida simbolo do Batman.
+                exibeQuadro(matriz);
+                menuAuxiliar(&quantidadeMais,&repeticao);
+            }
             break;
         case 8:                                           //Case 8, lida com o encerramento do programa e mensagem final.
             parada = 1;                                   //Alteração do valor da variável parada para encerrrar o while 
@@ -84,6 +104,7 @@ int main(int argc, char const *argv[])
             mensagemErro();                               //Função que lida com a mensagem aviso de erro no programa. 
             break;
         }
+        repeticao = 2;
     }
     return 0;
 }

@@ -123,23 +123,6 @@ void verificaQuantidadeBatman(int *quantidade){
         (*quantidade) = 3;
 }
 
-void insereMais(char matriz[linha][coluna], int opcao, int quantidadeMais, int quantidade){
-    if ((quantidadeMais) <= 0)
-        (quantidadeMais) = 1 + rand()%100;
-    else if((quantidadeMais || quantidadeMais + quantidade) > 100)
-        (quantidadeMais) = 100;
-
-    switch (opcao)
-    {
-    case 1:
-        pintaSimboloAsterisco(matriz,quantidadeMais);
-        exibeQuadro(matriz);
-        menuAuxiliar(&quantidadeMais);
-        break;
-    default:
-        break;
-    }
-}
 
 /*
     A função pinturaMista é utilizada no case 4. Ela faz a criação de três valores aleatórios para a quantidade dos simbolos: asteriscos, soma e X.
@@ -150,15 +133,18 @@ para fazer a pintura dos três simbolos e exibição da obra.
 
 void pinturaMista(char matriz[linha][coluna],int quantidade){
     int quantidadeTintaAsterisco = 0, quantidadeTintaSoma = 0,quantidadeTintaX = 0;
-
-    printf("Quantidade %d\n",quantidade);
-    while ((quantidadeTintaAsterisco + quantidadeTintaSoma + quantidadeTintaX) != quantidade)
-    {
-        quantidadeTintaAsterisco = 1+ rand() % quantidade;
-        quantidadeTintaSoma = 1+ rand() % quantidade;
-        quantidadeTintaX = 1+ rand() % quantidade;
+    if (quantidade >=3){
+         while ((quantidadeTintaAsterisco + quantidadeTintaSoma + quantidadeTintaX) != quantidade){
+            quantidadeTintaAsterisco = 1+ rand() % quantidade;
+            quantidadeTintaSoma = 1+ rand() % quantidade;
+            quantidadeTintaX = 1+ rand() % quantidade;
+        }
+    }else{
+        printf("\nQuantidade inferior que 3. Quantidade aleatoria ativada.\n");
+        quantidadeTintaAsterisco = 1+ rand() % 3;
+        quantidadeTintaSoma = 1+ rand() % 3;
+        quantidadeTintaX = 1+ rand() % 3;
     }
-    //printf("Quantidade %d\n",quantidadeTintaAsterisco+quantidadeTintaSoma+quantidadeTintaX);
 
     pintaSimboloAsterisco(matriz,quantidadeTintaAsterisco);
     pintaSimboloSoma(matriz,quantidadeTintaSoma);

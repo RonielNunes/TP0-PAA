@@ -36,7 +36,7 @@ void menu(int *opcao, int *quantidade){
     }
 
 }
-void menuAuxiliar(int *quantidadeMais){
+void menuAuxiliar(int *quantidadeMais, int *repeticao){
     int opcao;
     printf("\n===========================================================================\n");
     printf("Deseja um novo quadro ou adicionar mais pinturas ao quadro atual? \n");
@@ -46,8 +46,10 @@ void menuAuxiliar(int *quantidadeMais){
     scanf("%d",&opcao);
     if (opcao == 1)
     {
+        (*repeticao) = 0;
         return;
     }else if(opcao == 2){
+        (*repeticao) = 2;
         printf("Digite a nova quantidade de pinturas a serem inseridas: ");
         scanf("%d",quantidadeMais);
     }

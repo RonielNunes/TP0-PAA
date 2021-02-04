@@ -7,6 +7,6 @@
 */
 
 void menu(int *opcao, int *quantidade);
-void menuAuxiliar(int *quantidadeMais);
+void menuAuxiliar(int *quantidadeMais, int *repeticao);
 void mensagemEncerramento();
 void mensagemErro();
