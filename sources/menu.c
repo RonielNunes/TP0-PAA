@@ -11,6 +11,10 @@
 #include "../headers/funcao.h"
 #include "../headers/menu.h"
 
+
+/*
+    Função menu, funciona com a exibição das operações e a coleta das interações com o usúario.
+*/
 void menu(int *opcao, int *quantidade){
     printf("\n");
     printf("===========================================================================\n");
@@ -36,6 +40,9 @@ void menu(int *opcao, int *quantidade){
     }
 
 }
+/*
+    Faz parte da segunda interação com o usúario, ela se baseia se o mesmo deseja um novo quandro ou inserir mais imagens no atual.
+*/
 void menuAuxiliar(int *quantidadeMais, int *repeticao){
     int opcao;
     printf("\n===========================================================================\n");
@@ -54,10 +61,17 @@ void menuAuxiliar(int *quantidadeMais, int *repeticao){
         scanf("%d",quantidadeMais);
     }
 }
+/*
+    Função responsável por exibir mensagem de encerramento.
+*/
 
 void mensagemEncerramento(){
     printf("\n\n PROGRAMA ENCERRADO! TENHA UM BOM DIA!\n\n");
 }
+
+/*
+    Função responsável por exibir uma opção não encontrada.
+*/
 
 void mensagemErro(){
     printf("\n\nOPCAO NAO ENCONTADA! Tente novamente!\n\n");

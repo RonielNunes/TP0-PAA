@@ -6,6 +6,10 @@
 *       
 */
 
+/*
+    Funções usadas para interagir com o menu. 
+*/
+
 void menu(int *opcao, int *quantidade);
 void menuAuxiliar(int *quantidadeMais, int *repeticao);
 void mensagemEncerramento();

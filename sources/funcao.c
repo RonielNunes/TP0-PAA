@@ -125,10 +125,11 @@ void verificaQuantidadeBatman(int *quantidade){
 
 
 /*
-    A função pinturaMista é utilizada no case 4. Ela faz a criação de três valores aleatórios para a quantidade dos simbolos: asteriscos, soma e X.
-Ela funciona com a criação de três variáveis que são utilizadas para conter a quantidade de cada simbolo, onde é feito a geração de números aleatórios 
-no interior do while até que as três quantidades sejam iguais a quantidade inicial desejada. Logo em seguida, é feito a utilização das funções nescessarias 
-para fazer a pintura dos três simbolos e exibição da obra. 
+    A função pinturaMista é utilizada no case 4, ela funciona com a geração de uma quantidade aleatorias para as 3 primeiras artes(asteriscos,
+soma e X). Ela faz a criação de três valores aleatórios a soma envolvendo os três tem que ser igual a quantidade pedida pelo usuario, 
+caso, a quantidade pedida seja menor que três é feito um sorteio para cada um considerando o intervalode um a três, nesse momento é 
+enviado uma mensagem no terminal inidcando que o número será aleatorio. Após o final dos números aleatorio, e feito a utilização das funções
+auxiliares : quantidadeTintaAsterisco, quantidadeTintaSoma e quantidadeTintaX. Concluindo com a exibição da obra gerada. 
 */
 
 void pinturaMista(char matriz[linha][coluna],int quantidade){
@@ -154,10 +155,11 @@ void pinturaMista(char matriz[linha][coluna],int quantidade){
 
 /*
    A função pintaSimboloAsterisco, tem como parametros a matriz e a quantidade. A pintaSimboloAsterisco utilizando as seguintes condições, uma 
-variável chamada count é usada para conferir se a quantidade de asteriscos preenchidos é igual a quantidade total de asteriscos recebida do 
-usuário. Utiizamos a função linhaAleatoria para gerar um número aleatorio entre 1 e 19 para i e a utilização da colunaAleatoria para gerar de 
-1 a 79 para j ignorando as bordas que estão em 0 e 19 para i e 0 e 79 para j. Então conferimos se o espaço da matriz é um espaço vazio e se for um espaço vazio, preenchemos
- com um asteriscos e  incrementamos +1 na quantidade de asteriscos preenchidos. Deste modo, é feito a inserção do asterisco na posição desejada. 
+variável chamada count é usada para conferir se a quantidade de asteriscos preenchidos é igual a quantidade total de asteriscos recebida
+do usuário. Utitizando a função linhaAleatoria para gerar um número aleatorio entre 1 e 18 para i e a utilizando  a colunaAleatoria para gerar de 
+1 a 78 para j, esses intervalos foram escolhidos pois não compõem as bordas do quadro. Então conferimos se o espaço da matriz é um espaço
+vazio e se for um espaço vazio, preenchemos com um asteriscos e  incrementamos +1 na quantidade de asteriscos preenchidos. Deste modo, 
+é feito a inserção do asterisco na posição desejada. 
 */
 
 void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade){
@@ -175,8 +177,8 @@ void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade){
 }
 
 /*
-    A função pintaSimboloSoma, funciona da mesma maneira que a anterior. Sendo diferente simplesmente na sua condição de verificação e caso atendida
-é feito a pintura utilizando mais posições devido se tratar de uma imagem mais complexa. 
+    A função pintaSimboloSoma, funciona da mesma maneira que a anterior. Sendo diferente simplesmente na sua condição de verificação e 
+caso atendida é feito a pintura utilizando mais posições devido se tratar de uma imagem mais complexa. 
 */
 
 void pintaSimboloSoma(char matriz[linha][coluna], int quantidade){
@@ -222,10 +224,11 @@ void pintaSimboloX(char matriz[linha][coluna], int quantidade){
 
 
 /*
+
     Essas últimas três funções que são: pintaSimboloYinYang, pintaSimboloArroba e pintaSimboloBatman. Tem o mesmo funcionamento supracitado das funções 
-anteriores, seu diferencial é na questão de se tratar de imagem mais elaboradas, dando em sii uma maior quantidade de condições a serem atingidas 
-para gerar o seu preenchimento no quadro. Foi feito a utilização de imagem buscando sempre uma menor quantidade de pixel, sendo a mais dificl de 
-elaborar a imagem do yin yang. Essa dificuldade se veio por motivos de ter um maior número de indices a serem preenchidos.
+anteriores, seu diferencial é na questão de se tratar de imagem mais elaboradas, dando em si uma maior quantidade de condições a serem 
+atendidas para gerar o seu preenchimento no quadro.
+
 */
 
 void pintaSimboloYinYang(char matriz[linha][coluna], int quantidade){

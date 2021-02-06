@@ -8,6 +8,10 @@
 #define linha 20
 #define coluna 80
 
+/*
+    Funções usadas para interagir com o main. 
+*/
+
 void inicializaQuadro(char matriz[linha][coluna]);
 void exibeQuadro(char matriz[linha][coluna]);
 void pintaSimboloAsterisco(char matriz[linha][coluna], int quantidade);
