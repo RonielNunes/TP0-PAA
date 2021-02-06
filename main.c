@@ -5,10 +5,10 @@
 *   Professor: Daniel Mendes Barbosa
 *   Descrição:
 *           Este programa faz a criação de obras de artes em um quadro de 20x80.  
-*       E feito a leitura da obra de arte escolhida pelo usuário e em seguida a 
+*       É feito a leitura da obra de arte escolhida pelo usuário e em seguida a 
 *       quantidade de figuras desejadas no painel. As imagens escolhidas podem ser 
 *       os simbolos: asteriscos, soma, X, yin yang, arroba e batman.
-*   Data de conclusão: 03/02/2021
+*   Data de conclusão: 05/02/2021
 */
 
 #include <stdio.h>
