@@ -27,4 +27,3 @@ void verificaQuantidade(int *quantidade);
 void verificaQuantidadeYinYang(int *quantidade);
 void verificaQuantidadeArroba(int *quantidade);
 void verificaQuantidadeBatman(int *quantidade);
-void insereMais(char matriz[linha][coluna], int opcao, int quantidadeMais, int quantidade);
