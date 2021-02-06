@@ -17,6 +17,7 @@
 #include "./headers/funcao.h"
 #include "./headers/menu.h"
 
+//Comando usado para compilar e gerar um executável(teste.exe)
 //gcc -o teste main.c ./headers/funcao.h ./sources/funcao.c ./headers/menu.h ./sources/menu.c
 
 int main(int argc, char const *argv[])
