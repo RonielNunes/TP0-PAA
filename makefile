@@ -1,8 +1,4 @@
-all: main.c sources/funcoes.c sources/menu.c
-	gcc main.c -o exec sources/funcoes.c sources/menu.c
-
-run: exec
-	./exec
-
-rm: exec
-	rm exec
+compile:
+		gcc -o exec main.c ./headers/funcao.h ./sources/funcao.c ./headers/menu.h ./sources/menu.c
+run:
+		./exec
