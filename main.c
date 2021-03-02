@@ -101,7 +101,7 @@ int main(int argc, char const *argv[])
             parada = 1;                                   //Alteração do valor da variável parada para encerrrar o while 
             mensagemEncerramento();                       //Função que lida com a mensagem de encerramento do programa.
             break;             
-        default:                                          // Case default, çida com tratemeto de erros de opções não validas.
+        default:                                          // Case default, lida com tratemeto de erros de opções não validas.
             mensagemErro();                               //Função que lida com a mensagem aviso de erro no programa. 
             break;
         }
